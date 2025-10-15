@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>net9.0-windows</TargetFramework>
+	<UseWindowsForms>true</UseWindowsForms>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<Title>Department Accounting</Title>
+	<Authors>Ladyagin Pavel</Authors>
+	<Company>PIbd-33</Company>
+	<Description>Department Accounting Contracts</Description>
+	<PackageId>DepartmentAccountingContracts</PackageId>
+	<Version>1.0.0</Version>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageOutputPath>..\..\Packages</PackageOutputPath>
+  </PropertyGroup>
+
+</Project>

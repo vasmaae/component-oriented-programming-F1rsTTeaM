@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepartmentAccountingProgram", "DepartmentAccountingProgram\DepartmentAccountingProgram.csproj", "{8CEA8438-E771-46E9-812A-44E3456C45B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepartmentAccountingContracts", "DepartmentAccountingContracts\DepartmentAccountingContracts.csproj", "{06C69225-88AF-435F-911A-EBFDEDF2DEAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CEA8438-E771-46E9-812A-44E3456C45B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEA8438-E771-46E9-812A-44E3456C45B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEA8438-E771-46E9-812A-44E3456C45B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEA8438-E771-46E9-812A-44E3456C45B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C69225-88AF-435F-911A-EBFDEDF2DEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C69225-88AF-435F-911A-EBFDEDF2DEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C69225-88AF-435F-911A-EBFDEDF2DEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C69225-88AF-435F-911A-EBFDEDF2DEAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A67B2C17-57EA-4C58-87A5-FCCFDB6C2E2D}
+	EndGlobalSection
+EndGlobal
