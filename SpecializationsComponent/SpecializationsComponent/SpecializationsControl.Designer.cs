@@ -38,6 +38,7 @@
             specializationsDataGridView.AllowUserToDeleteRows = false;
             specializationsDataGridView.AllowUserToResizeColumns = false;
             specializationsDataGridView.AllowUserToResizeRows = false;
+            specializationsDataGridView.BackgroundColor = Color.White;
             specializationsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             specializationsDataGridView.Dock = DockStyle.Fill;
             specializationsDataGridView.Location = new Point(0, 0);

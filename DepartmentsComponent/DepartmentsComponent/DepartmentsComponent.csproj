@@ -1,25 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
     <TargetFramework>net9.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <OutputPath Condition="'$(Configuration)'=='Release'">..\..\Libraries</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ControlsLibraryNet90" Version="1.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DepartmentAccountingContracts\DepartmentAccountingContracts.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="app.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <PackageReference Include="DepartmentAccountingContracts" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

@@ -72,7 +72,6 @@ public partial class UnitsForm : Form
                         var component = Activator.CreateInstance(type) as IComponentContract;
                         if (component is not null && IsComponentAllowed(component.Type))
                             _loadedComponents.Add(component);
-                        MessageBox.Show($"{component.DisplayName}", "asd", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
