@@ -4,7 +4,7 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<OutputPath Condition="'$(Configuration)'=='Release'">..\..\PluginsLibraries</OutputPath>
+	<OutputPath Condition="'$(Configuration)'=='Release'">..\PluginsLibraries</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
