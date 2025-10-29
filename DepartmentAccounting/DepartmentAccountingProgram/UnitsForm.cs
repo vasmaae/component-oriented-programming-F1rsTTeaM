@@ -1,4 +1,4 @@
-using DepartmentAccountingContracts.ComponentContracts;
+﻿using DepartmentAccountingContracts.ComponentContracts;
 using DepartmentAccountingContracts.Enums;
 using LabWorkAccountingProgram;
 using System.Configuration;
@@ -28,7 +28,7 @@ public partial class UnitsForm : Form
             string? licensePath = ConfigurationManager.AppSettings["LicensePath"];
             if (string.IsNullOrEmpty(licensePath) || !File.Exists(licensePath))
             {
-                MessageBox.Show($"���� �������� �� ������ ��� ���� � ����� �� ������", "������", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Файл лицензии не найден или путь к файлу не указан", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _licenseLevel = LicenseLevel.Minimal;
                 return;
             }
@@ -44,7 +44,7 @@ public partial class UnitsForm : Form
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"������ ��� �������� ��������: {ex.Message}", "������", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Ошибка при загрузке лицензии: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             _licenseLevel = LicenseLevel.Minimal;
         }
     }
@@ -56,7 +56,7 @@ public partial class UnitsForm : Form
             string? librariesPath = ConfigurationManager.AppSettings["ComponentsLibrariesPath"];
             if (string.IsNullOrEmpty(librariesPath) || !Directory.Exists(librariesPath))
             {
-                MessageBox.Show($"���������� �� ������� �� ���������� ���� ��� ���� �� ������ ({librariesPath})", "������", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Директория не найдена или путь к директории не указан ({librariesPath})", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -78,13 +78,13 @@ public partial class UnitsForm : Form
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"������ ��� �������� ������ {Path.GetFileName(dll)}: {ex.Message}", "������", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка при загрузке библиотеки {Path.GetFileName(dll)}: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"������ ��� �������� �����������: {ex.Message}", "������", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Ошибка при загрузке компонентов: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
@@ -101,8 +101,8 @@ public partial class UnitsForm : Form
 
     private void BuildMenu()
     {
-        var directoriesMenu = new ToolStripMenuItem("�����������");
-        var reportsMenu = new ToolStripMenuItem("������");
+        var directoriesMenu = new ToolStripMenuItem("Справочники");
+        var reportsMenu = new ToolStripMenuItem("Отчеты");
 
         _typeMenus[ComponentCategory.Entity] = directoriesMenu;
         _typeMenus[ComponentCategory.Report] = reportsMenu;

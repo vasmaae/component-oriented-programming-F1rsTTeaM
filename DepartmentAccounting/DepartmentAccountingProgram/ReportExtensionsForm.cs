@@ -31,6 +31,17 @@ public partial class ReportExtensionsForm : Form
                 return;
             }
 
+            AppDomain.CurrentDomain.AssemblyResolve += (sender, args) =>
+            {
+                string assemblyName = new AssemblyName(args.Name).Name + ".dll";
+                string assemblyPath = Path.Combine(librariesPath, assemblyName);
+
+                if (File.Exists(assemblyPath))
+                    return Assembly.LoadFrom(assemblyPath);
+
+                return null;
+            };
+
             var dllFiles = Directory.GetFiles(librariesPath, "*.dll");
 
             foreach (var dll in dllFiles)
@@ -137,7 +148,7 @@ public partial class ReportExtensionsForm : Form
                     "Распределение по специализациям",
                     "Специализация",
                     series);
-                MessageBox.Show($"Файл сохранён как: {filePath} {series[2].Value}");
+                MessageBox.Show($"Файл сохранён как: {filePath}");
             }
         }
         catch (Exception ex)
