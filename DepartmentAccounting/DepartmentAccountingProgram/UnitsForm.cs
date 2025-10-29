@@ -26,7 +26,7 @@ public partial class UnitsForm : Form
             string? licensePath = ConfigurationManager.AppSettings["LicensePath"];
             if (string.IsNullOrEmpty(licensePath) || !File.Exists(licensePath))
             {
-                MessageBox.Show($"Файл лицензии не найден или путь к файлу не указан", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _licenseLevel = LicenseLevel.Minimal;
                 return;
             }
@@ -42,7 +42,7 @@ public partial class UnitsForm : Form
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Ошибка при загрузке лицензии: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: {ex.Message}", "пїЅпїЅпїЅпїЅпїЅпїЅ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             _licenseLevel = LicenseLevel.Minimal;
         }
     }
@@ -51,10 +51,10 @@ public partial class UnitsForm : Form
     {
         try
         {
-            string? librariesPath = ConfigurationManager.AppSettings["LibrariesPath"];
+            string? librariesPath = ConfigurationManager.AppSettings["ComponentsLibrariesPath"];
             if (string.IsNullOrEmpty(librariesPath) || !Directory.Exists(librariesPath))
             {
-                MessageBox.Show($"Компоненты не найдены по указанному пути или путь не указан ({librariesPath})", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ ({librariesPath})", "пїЅпїЅпїЅпїЅпїЅпїЅ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -76,13 +76,13 @@ public partial class UnitsForm : Form
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ошибка при загрузке сборки {Path.GetFileName(dll)}: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ {Path.GetFileName(dll)}: {ex.Message}", "пїЅпїЅпїЅпїЅпїЅпїЅ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Ошибка при загрузке компонентов: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: {ex.Message}", "пїЅпїЅпїЅпїЅпїЅпїЅ", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
@@ -99,8 +99,8 @@ public partial class UnitsForm : Form
 
     private void BuildMenu()
     {
-        var directoriesMenu = new ToolStripMenuItem("Справочники");
-        var reportsMenu = new ToolStripMenuItem("Отчёты");
+        var directoriesMenu = new ToolStripMenuItem("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+        var reportsMenu = new ToolStripMenuItem("пїЅпїЅпїЅпїЅпїЅпїЅ");
 
         _typeMenus[ComponentCategory.Entity] = directoriesMenu;
         _typeMenus[ComponentCategory.Report] = reportsMenu;
