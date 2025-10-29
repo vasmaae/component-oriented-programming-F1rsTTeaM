@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordContextImagesReportPlugin", "WordContextImagesReportPlugin.csproj", "{9BA3B802-B839-42FA-BA15-B1685B3E1123}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BA3B802-B839-42FA-BA15-B1685B3E1123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BA3B802-B839-42FA-BA15-B1685B3E1123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BA3B802-B839-42FA-BA15-B1685B3E1123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BA3B802-B839-42FA-BA15-B1685B3E1123}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DEE2B83-9861-4147-85BD-D042B7D7DF44}
+	EndGlobalSection
+EndGlobal
