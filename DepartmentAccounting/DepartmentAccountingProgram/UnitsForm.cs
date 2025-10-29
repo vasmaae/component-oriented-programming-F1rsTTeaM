@@ -1,5 +1,6 @@
 using DepartmentAccountingContracts.ComponentContracts;
 using DepartmentAccountingContracts.Enums;
+using LabWorkAccountingProgram;
 using System.Configuration;
 using System.Reflection;
 
@@ -17,6 +18,7 @@ public partial class UnitsForm : Form
         LoadLicenseLevel();
         LoadComponents();
         BuildMenu();
+        LoadPlugins();
     }
 
     private void LoadLicenseLevel()
@@ -117,6 +119,24 @@ public partial class UnitsForm : Form
                 subItem.Click += SubMenuItem_Click;
                 categoryMenu.DropDownItems.Add(subItem);
             }
+        }
+    }
+
+    private void LoadPlugins()
+    {
+        try
+        {
+            var extensionsMenuItem = new ToolStripMenuItem("Расширения");
+            _typeMenus[ComponentCategory.Report].DropDownItems.Add(extensionsMenuItem);
+            extensionsMenuItem.Click += (sender, e) =>
+            {
+                var reportExtensionsForm = new ReportExtensionsForm();
+                reportExtensionsForm.ShowDialog();
+            };
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Ошибка при загрузке плагинов: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
